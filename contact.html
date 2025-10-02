@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Paw Partners Dog Care | Contact</title>
+  <meta name='description' content='Get in touch to arrange dog walking, daycare, training, grooming, or boarding. We respond quickly.'>
+  <meta property='og:title' content='Paw Partners - Contact' />
+  <meta property='og:description' content='Reach out to Paw Partners for reliable dog care services.' />
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#2563EB', secondary: '#10B981' } } } }
+  </script>
+  <style> html { scroll-behavior: smooth; } </style>
+</head>
+<body class='font-sans text-gray-800'>
+  <nav class='fixed w-full bg-white shadow-md z-50'>
+    <div class='container mx-auto px-6 py-4 flex items-center justify-between'>
+      <div class='text-2xl font-bold text-primary'>Paw Partners</div>
+      <div class='hidden md:flex space-x-6'>
+        <a href='index.html' class='hover:text-primary'>Home</a>
+        <a href='services.html' class='hover:text-primary'>Services</a>
+        <a href='blog.html' class='hover:text-primary'>Blog</a>
+        <a href='resources.html' class='hover:text-primary'>Resources</a>
+      </div>
+    </div>
+  </nav>
+  <header class='pt-28 pb-6 bg-gray-50'>
+    <div class='container mx-auto px-6'>
+      <h1 class='text-4xl font-bold'>Contact Paw Partners</h1>
+      <p class='text-gray-600 mt-2'>Tell us about your dog and how we can help. We reply within one business day.</p>
+    </div>
+  </header>
+  <main class='container mx-auto px-6 py-12'>
+    <section class='max-w-2xl mx-auto bg-white p-6 rounded-xl shadow'>
+      <form id='contact-form'>
+        <div class='mb-4'>
+          <label class='block text-sm font-semibold mb-1'>Name</label>
+          <input type='text' name='name' required class='w-full px-3 py-2 border border-gray-300 rounded'>
+        </div>
+        <div class='mb-4'>
+          <label class='block text-sm font-semibold mb-1'>Email</label>
+          <input type='email' name='email' required class='w-full px-3 py-2 border border-gray-300 rounded'>
+        </div>
+        <div class='mb-4'>
+          <label class='block text-sm font-semibold mb-1'>Subject</label>
+          <input type='text' name='subject' class='w-full px-3 py-2 border border-gray-300 rounded'>
+        </div>
+        <div class='mb-4'>
+          <label class='block text-sm font-semibold mb-1'>Message</label>
+          <textarea name='message' rows='5' required class='w-full px-3 py-2 border border-gray-300 rounded'></textarea>
+        </div>
+        <button type='submit' class='bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90'>Send Message</button>
+      </form>
+      <div id='form-status' class='mt-4 hidden p-3 rounded-lg'></div>
+    </section>
+  </main>
+  <footer class='bg-gray-900 text-white py-6'>
+    <div class='container mx-auto px-6 text-sm'>© 2025 Paw Partners. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Contact form submission (placeholder integration guidance)
+    document.getElementById('contact-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      // Replace the endpoint below with your real form submission URL (e.g., Formspree, Netlify, or your server API)
+      const endpoint = 'https://formspree.io/f/yourformid';
+      const status = document.getElementById('form-status');
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          status.className = 'bg-green-100 border border-green-400 text-green-700';
+          status.textContent = 'Thank you! Your message has been sent.';
+          status.classList.remove('hidden');
+          form.reset();
+        } else {
+          status.className = 'bg-red-100 border border-red-400 text-red-700';
+          status.textContent = 'There was a problem submitting the form. Please try again later.';
+          status.classList.remove('hidden');
+        }
+      } catch (err) {
+        status.className = 'bg-red-100 border border-red-400 text-red-700';
+        status.textContent = 'Network error. Please check your connection.';
+        status.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
