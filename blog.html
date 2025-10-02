@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Paw Partners Blog | Dog Care Tips</title>
+  <meta name='description' content='Expert dog care tips on training, health, nutrition, and safety from Paw Partners.'>
+  <meta property='og:title' content='Paw Partners Blog' />
+  <meta property='og:description' content='Expert dog care tips on training, health, nutrition, and safety.' />
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: '#2563EB', secondary: '#10B981', accent: '#F59E0B' } } } }
+  </script>
+  <style> html { scroll-behavior: smooth; } </style>
+</head>
+<body class='font-sans text-gray-800'>
+  <nav class='fixed w-full bg-white shadow-md z-50'>
+    <div class='container mx-auto px-6 py-4 flex items-center justify-between'>
+      <div class='text-2xl font-bold text-primary'>Paw Partners</div>
+      <div class='hidden md:flex space-x-6'>
+        <a href='index.html' class='hover:text-primary'>Home</a>
+        <a href='about.html' class='hover:text-primary'>About</a>
+        <a href='services.html' class='hover:text-primary'>Services</a>
+        <a href='contact.html' class='hover:text-primary'>Contact</a>
+      </div>
+    </div>
+  </nav>
+  <header class='pt-28 pb-6 bg-gray-50'>
+    <div class='container mx-auto px-6'>
+      <h1 class='text-4xl font-bold'>Dog Care Blog</h1>
+      <p class='text-gray-600 mt-2'>Knowledge to support happy, healthy dogs and confident owners.</p>
+    </div>
+  </header>
+  <main class='container mx-auto px-6 py-8'>
+    <section class='mb-8'>
+      <div class='flex flex-wrap gap-4 mb-4'>
+        <span class='px-3 py-1 bg-gray-200 rounded-full text-sm'>#Training</span>
+        <span class='px-3 py-1 bg-gray-200 rounded-full text-sm'>#Nutrition</span>
+        <span class='px-3 py-1 bg-gray-200 rounded-full text-sm'>#Safety</span>
+      </div>
+      <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <article class='bg-white rounded-xl p-6 shadow'>
+          <h3 class='font-semibold text-lg mb-2'>5 Essential Training Tips for New Owners</h3>
+          <p class='text-gray-700'>Build confidence with consistency, clear cues, and short daily sessions. Here are practical steps to start today.</p>
+          <details class='mt-4'>
+            <summary class='cursor-pointer text-primary font-semibold'>Read more</summary>
+            <p class='text-gray-600 mt-2'>Consistency beats intensity. Short 5-10 minute sessions daily help dogs learn faster and reduce frustration for you both.</p>
+          </details>
+        </article>
+        <article class='bg-white rounded-xl p-6 shadow'>
+          <h3 class='font-semibold text-lg mb-2'>Nutrition Basics: What to Feed Your Dog</h3>
+          <p class='text-gray-700'>Understanding portions, ingredients, and feeding schedules to keep energy steady and coats shiny.</p>
+          <details class='mt-4'>
+            <summary class='cursor-pointer text-primary font-semibold'>Read more</summary>
+            <p class='text-gray-600 mt-2'>Balance protein with fats and essential fatty acids. Always choose complete, age-appropriate foods and consult a vet for allergens.</p>
+          </details>
+        </article>
+        <article class='bg-white rounded-xl p-6 shadow'>
+          <h3 class='font-semibold text-lg mb-2'>Seasonal Safety for Dogs</h3>
+          <p class='text-gray-700'>Keep dogs safe from heat, cold, and seasonal hazards with simple routines and gear.</p>
+          <details class='mt-4'>
+            <summary class='cursor-pointer text-primary font-semibold'>Read more</summary>
+            <p class='text-gray-600 mt-2'>Hydration, shade, and paw protection are key in hot weather. In winter, short walks and warm coats matter for comfort.</p>
+          </details>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class='bg-gray-900 text-white py-6'>
+    <div class='container mx-auto px-6 text-sm'>© 2025 Paw Partners. All rights reserved.</div>
+  </footer>
+</body>
+</html>
