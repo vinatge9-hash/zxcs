@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Paw Partners Dog Care | Home</title>
+  <meta name='description' content='Loving dog care services including walks, daycare, training, grooming, and boarding. Keeping tails wagging and pups thriving.'>
+  <meta property='og:title' content='Paw Partners Dog Care' />
+  <meta property='og:description' content='Loving dog care services including walks, daycare, training, grooming, and boarding.' />
+  <meta property='og:image' content='https://images.unsplash.com/photo-1525253756854-9b7f8e1e9a2d?auto=format&fit=crop&w=1200&q=80' />
+  <script src='https://cdn.tailwindcss.com'></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            secondary: '#10B981',
+            accent: '#F59E0B'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    .animate-fadeIn { animation: fadeIn 0.6s ease-out forwards; }
+  </style>
+</head>
+<body class='font-sans text-gray-800'>
+  <!-- Navigation -->
+  <nav class='fixed w-full bg-white shadow-md z-50'>
+    <div class='container mx-auto px-6 py-4'>
+      <div class='flex items-center justify-between'>
+        <div class='text-2xl font-bold text-primary'>Paw Partners</div>
+        <div class='hidden md:flex space-x-6'>
+          <a href='index.html' class='hover:text-primary transition'>Home</a>
+          <a href='about.html' class='hover:text-primary transition'>About</a>
+          <a href='services.html' class='hover:text-primary transition'>Services</a>
+          <a href='blog.html' class='hover:text-primary transition'>Blog</a>
+          <a href='contact.html' class='hover:text-primary transition'>Contact</a>
+          <a href='resources.html' class='hover:text-primary transition'>Resources</a>
+        </div>
+        <button id='mobile-menu-btn' class='md:hidden p-2 rounded-md'>
+          <svg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+            <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'/>
+          </svg>
+        </button>
+      </div>
+      <div id='mobile-menu' class='md:hidden hidden pt-2 pb-4'>
+        <a href='index.html' class='block py-2'>Home</a>
+        <a href='about.html' class='block py-2'>About</a>
+        <a href='services.html' class='block py-2'>Services</a>
+        <a href='blog.html' class='block py-2'>Blog</a>
+        <a href='contact.html' class='block py-2'>Contact</a>
+        <a href='resources.html' class='block py-2'>Resources</a>
+      </div>
+    </div>
+  </nav>
+  <script>
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section class='relative h-screen bg-cover bg-center' style="background-image: url('https://images.unsplash.com/photo-1525253756854-9b7f8e1e9a2d?auto=format&fit=crop&w=1600&q=80');">
+    <div class='absolute inset-0 bg-black opacity-40'></div>
+    <div class='relative z-10 container mx-auto px-6 h-full flex items-center'>
+      <div class='text-white md:w-2/3 animate-fadeIn'>
+        <h1 class='text-4xl md:text-6xl font-bold mb-4'>Caring for your best friend, every day</h1>
+        <p class='text-lg md:text-xl mb-6'>Professional dog walking, daycare, training, grooming, and boarding services. Your dog, happier and healthier with a partner you can trust.</p>
+        <div class='space-x-4'>
+          <a href='contact.html' class='inline-block bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition'>Book a Walk</a>
+          <a href='services.html' class='inline-block bg-transparent border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition'>See Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Intro -->
+  <section class='py-14 bg-gray-50'>
+    <div class='container mx-auto px-6'>
+      <div class='grid md:grid-cols-3 gap-8 text-center'>
+        <div class='p-6 bg-white rounded-xl shadow'>
+          <div class='text-3xl mb-2'>🐶</div>
+          <h3 class='text-xl font-semibold'>Reliable Walks</h3>
+          <p class='text-gray-600'>Daily routes tailored to energy level, weather, and your dog’s needs.</p>
+        </div>
+        <div class='p-6 bg-white rounded-xl shadow'>
+          <div class='text-3xl mb-2'>🏡</div>
+          <h3 class='text-xl font-semibold'>Safe Daycare</h3>
+          <p class='text-gray-600'>Structured play, rest periods, and loving supervision throughout the day.</p>
+        </div>
+        <div class='p-6 bg-white rounded-xl shadow'>
+          <div class='text-3xl mb-2'>🎯</div>
+          <h3 class='text-xl font-semibold'>Positive Training</h3>
+          <p class='text-gray-600'>Gentle, consistent cues to support good behavior and confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services -->
+  <section id='services' class='py-16'>
+    <div class='container mx-auto px-6'>
+      <h2 class='text-3xl md:text-4xl font-bold text-center mb-8'>Our Services</h2>
+      <div class='grid md:grid-cols-3 gap-8'>
+        <article class='bg-white rounded-xl p-6 shadow'>
+          <img src='https://images.unsplash.com/photo-1552051730-3556a6e9e9d4?auto=format&fit=crop&w=600&q=80' alt='Dog on a walk' class='w-full h-40 object-cover rounded-md mb-4'>
+          <h3 class='font-semibold text-xl mb-2'>Dog Walking</h3>
+          <p class='text-gray-600'>Balanced routes, hydration breaks, and a energized pup ready for the day.</p>
+        </article>
+        <article class='bg-white rounded-xl p-6 shadow'>
+          <img src='https://images.unsplash.com/photo-1518715304004-2f8e6c6e00b0?auto=format&fit=crop&w=600&q=80' alt='Dog playing at daycare' class='w-full h-40 object-cover rounded-md mb-4'>
+          <h3 class='font-semibold text-xl mb-2'>Daycare & Boarding</h3>
+          <p class='text-gray-600'>Safe, supervised play in clean spaces with comfy rest areas.</p>
+        </article>
+        <article class='bg-white rounded-xl p-6 shadow'>
+          <img src='https://images.unsplash.com/photo-1556228450-2b0f9a8b0a63?auto=format&fit=crop&w=600&q=80' alt='Dog receiving grooming' class='w-full h-40 object-cover rounded-md mb-4'>
+          <h3 class='font-semibold text-xl mb-2'>Grooming & Care</h3>
+          <p class='text-gray-600'>Gentle baths, brushing, nails, and coat care to keep coats healthy.</p>
+        </article>
+      </div>
+      <div class='mt-6 text-center'>
+        <a href='services.html' class='inline-block px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-opacity-90 transition'>View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class='py-12 bg-gray-100'>
+    <div class='container mx-auto px-6'>
+      <div class='bg-white p-6 rounded-xl shadow-md md:flex md:items-center md:justify-between'>
+        <div>
+          <h4 class='text-xl font-semibold mb-2'>Join our Pup Newsletter</h4>
+          <p class='text-gray-600'>Weekly tips on training, nutrition, and seasonal care for your dog.</p>
+        </div>
+        <form id='newsletter-form' class='mt-4 md:mt-0 flex' onsubmit='return false;'>
+          <input type='email' placeholder='Your email' aria-label='Email address' required class='w-full md:w-64 px-4 py-2 border border-gray-300 rounded-l-md'>
+          <button type='submit' class='bg-accent text-white px-4 py-2 rounded-r-md hover:bg-opacity-90'>Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class='bg-gray-900 text-white py-8'>
+    <div class='container mx-auto px-6 text-sm text-gray-300'>
+      © 2025 Paw Partners. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Newsletter mock submit (replace with real integration in production)
+    document.getElementById('newsletter-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for joining our Pup Newsletter!');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
